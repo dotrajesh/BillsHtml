@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Events & Offers</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.png" type="image/x-icon"> -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
+		<link href="css/datepicker.css" rel="stylesheet" type="text/css" />
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" /> -->
+		<script src="js/bootstrap-datepicker.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
+	</head>
+	<body class="inner-page">
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12  col-lg-12">
+						<nav id="navbar_top" class="navbar navbar-light bg-light fixed-top ">
+							<div class="container-fluid">
+								<a class="navbar-brand" href="javascript:void(0)"><img src="images/logo-header.svg" alt="" /></a>
+								<ul class="custom-nav">
+									<li> <a href="javascript:void(0)">Menus</a></li>
+									<li> <a href="javascript:void(0)">Locations</a></li>
+									<li> <a href="javascript:void(0)">Events &#38; Offers</a></li>
+									<li> <a href="javascript:void(0)">Book A Table</a></li>
+								</ul>
+								<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+								<!-- <span class="navbar-toggler-icon"></span> -->
+								<img src="images/menu-bar-icon.svg" alt="" />
+								</button>
+								<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+									<div class="offcanvas-header">
+										<h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+										<img class="btn-close text-reset" src="images/menu-bar-close-icon.svg" alt="" data-bs-dismiss="offcanvas" aria-label="Close" />
+										<!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+									</div>
+									<div class="offcanvas-body">
+										<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+											<li class="menu-item">
+												<a class="nav-link active" aria-current="page" href="javascript:void(0)">Book A Table</a>
+											</li>
+											<li class="menu-item">
+												<a class="nav-link" href="javascript:void(0)">Menus</a>
+											</li>
+											<li class="menu-item">
+												<a class="nav-link" href="javascript:void(0)">Group Bookings</a>
+											</li>
+											<li class="menu-item">
+												<a class="nav-link" href="javascript:void(0)">Night Fever</a>
+											</li>
+											<li class="menu-item">
+												<a class="nav-link" href="javascript:void(0)">Christmas</a>
+											</li>
+											<li class="menu-item">
+												<a class="nav-link" href="javascript:void(0)">Blog</a>
+											</li>
+											<li class="menu-item">
+												<a class="nav-link" href="javascript:void(0)">The Caring Family Foundation</a>
+											</li>
+											<li class="menu-item">
+												<a class="nav-link" href="javascript:void(0)">Careers</a>
+											</li>
+											<li class="menu-item">
+												<a class="nav-link" href="javascript:void(0)">Gift Cards</a>
+											</li>
+										</ul>
+										<ul class="social-section">
+											<li>
+												<a href="javascript:void(0)">
+													<svg xmlns="http://www.w3.org/2000/svg" width="20.671" height="20.671" viewBox="0 0 20.671 20.671">
+														<path id="Icon_simple-instagram" data-name="Icon simple-instagram" d="M10.336,0C7.528,0,7.177.013,6.075.062A7.621,7.621,0,0,0,3.566.543,5.061,5.061,0,0,0,1.735,1.735,5.043,5.043,0,0,0,.543,3.566,7.6,7.6,0,0,0,.062,6.075C.01,7.177,0,7.528,0,10.336S.013,13.494.062,14.6a7.626,7.626,0,0,0,.481,2.509,5.069,5.069,0,0,0,1.192,1.831,5.054,5.054,0,0,0,1.831,1.192,7.631,7.631,0,0,0,2.509.481c1.1.052,1.453.062,4.261.062s3.158-.013,4.261-.062a7.649,7.649,0,0,0,2.509-.481,5.282,5.282,0,0,0,3.023-3.023,7.626,7.626,0,0,0,.481-2.509c.052-1.1.062-1.453.062-4.261s-.013-3.158-.062-4.261a7.644,7.644,0,0,0-.481-2.509,5.073,5.073,0,0,0-1.192-1.831A5.036,5.036,0,0,0,17.106.543,7.6,7.6,0,0,0,14.6.062C13.494.01,13.144,0,10.336,0Zm0,1.86c2.759,0,3.088.014,4.177.061a5.7,5.7,0,0,1,1.918.357A3.4,3.4,0,0,1,18.393,4.24a5.707,5.707,0,0,1,.356,1.918c.049,1.09.06,1.418.06,4.177s-.013,3.088-.064,4.177a5.817,5.817,0,0,1-.363,1.918,3.282,3.282,0,0,1-.774,1.19,3.225,3.225,0,0,1-1.189.772,5.749,5.749,0,0,1-1.925.356c-1.1.049-1.42.06-4.185.06s-3.089-.013-4.185-.064A5.861,5.861,0,0,1,4.2,18.383a3.2,3.2,0,0,1-1.188-.774,3.138,3.138,0,0,1-.775-1.189,5.866,5.866,0,0,1-.362-1.925c-.039-1.085-.053-1.42-.053-4.172s.014-3.089.053-4.187a5.859,5.859,0,0,1,.362-1.924,3.064,3.064,0,0,1,.775-1.189A3.057,3.057,0,0,1,4.2,2.249a5.721,5.721,0,0,1,1.913-.363c1.1-.039,1.421-.052,4.185-.052l.039.026Zm0,3.168a5.307,5.307,0,1,0,5.307,5.307A5.307,5.307,0,0,0,10.336,5.028Zm0,8.753a3.445,3.445,0,1,1,3.445-3.445A3.444,3.444,0,0,1,10.336,13.781Zm6.758-8.962a1.24,1.24,0,1,1-1.24-1.239A1.241,1.241,0,0,1,17.094,4.819Z" fill="#fff"/>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10.161" height="18.973" viewBox="0 0 10.161 18.973">
+														<path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M11.105,10.672l.527-3.434H8.337V5.01a1.717,1.717,0,0,1,1.936-1.855h1.5V.232A18.265,18.265,0,0,0,9.112,0C6.4,0,4.625,1.645,4.625,4.622V7.239H1.609v3.434H4.625v8.3H8.337v-8.3Z" transform="translate(-1.609)" fill="#fff"/>
+													</svg>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0)">
+													<svg xmlns="http://www.w3.org/2000/svg" width="22.674" height="18.451" viewBox="0 0 22.674 18.451">
+														<path id="Icon_ionic-logo-twitter" data-name="Icon ionic-logo-twitter" d="M24.088,6.686a9.4,9.4,0,0,1-2.672.735,4.668,4.668,0,0,0,2.047-2.575,9.244,9.244,0,0,1-2.955,1.129A4.651,4.651,0,0,0,12.46,9.156a4.554,4.554,0,0,0,.12,1.062A13.183,13.183,0,0,1,2.989,5.35a4.661,4.661,0,0,0,1.446,6.218,4.544,4.544,0,0,1-2.114-.581v.058a4.656,4.656,0,0,0,3.733,4.565,4.683,4.683,0,0,1-1.225.163,4.389,4.389,0,0,1-.874-.086A4.659,4.659,0,0,0,8.3,18.92a9.327,9.327,0,0,1-5.78,1.994,9.429,9.429,0,0,1-1.11-.067,13,13,0,0,0,7.121,2.1A13.157,13.157,0,0,0,21.781,9.7c0-.2,0-.4-.014-.6A9.47,9.47,0,0,0,24.088,6.686Z" transform="translate(-1.413 -4.5)" fill="#fff"/>
+													</svg>
+												</a>
+											</li>
+										</ul>
+										<!-- 	<form class="d-flex">
+												<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+												<button class="btn btn-outline-success" type="submit">Search</button>
+										</form> -->
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+	<section class="top-header">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-12">
+					<h1>Events &#38; Offers</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="wrapper">
+		<section class="what-at-bill">
+			<div class="heading">
+				<h2>What’s on at Bill’s</h2>
+				<p>Fantastic daily offers &#38; events!</p>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="card">
+							<div class="row align-items-center ">
+								<div class="col-12 col-sm-4 col-md-6 col-lg-5">
+									<div class="img-box">
+										<img src="images/night-efver-img.png" alt="" />
+									</div>
+								</div>
+								<div class="col-12 col-sm-4 col-md-6 col-lg-7">
+									<div class="inner">
+										<div class="title">Night Fever</div>
+										<div class="dec">
+											The night doesn’t end when the meal’s over – it’s when the party really starts. Every Thursday, Friday and Saturday night from 30 September get ready to eat, drink, dance, repeat, as we bring you bran…
+										</div>
+										<a class="btn" href="javascript:void(0)"><span>Find Out More</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="row align-items-center">
+								<div class="col-12 col-sm-4 col-md-6 col-lg-5">
+									<div class="img-box">
+										<img src="images/night-efver-img.png" alt="" />
+									</div>
+								</div>
+								<div class="col-12 col-sm-4 col-md-6 col-lg-7">
+									<div class="inner">
+										<div class="title">Incredible Set Menu</div>
+										<div class="dec">
+											Dine on our incredible set menu, available Monday to Thursday for lunch and dinner from £13.95 for two courses or £16.95 for three courses. Choose from seasonal favourites such as crispy chicken and sesame dumpling…
+										</div>
+										<a class="btn" href="javascript:void(0)"><span>Find Out More</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="row align-items-center">
+								<div class="col-12 col-sm-4 col-md-6 col-lg-5">
+									<div class="img-box">
+										<img src="images/christmas-Bookings-img.png" alt="" />
+									</div>
+								</div>
+								<div class="col-12 col-sm-4 col-md-6 col-lg-7">
+									<div class="inner">
+										<div class="title">Christmas Bookings</div>
+										<div class="dec">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+										</div>
+										<a class="btn" href="javascript:void(0)"><span>Find Out More</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="view-all-section">
+								<a class="btn large" href="javascript:void(0)"><span>View All</span></a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+		<section class="discover-our-menus">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="dis-box">
+							<img src="images/all-day-img.png" alt="" />
+							<div class="inner">
+									<div class="title"></div>
+									<div class="sub-title"></div>
+								<div class="info">
+									<a href="javascript:void(0)">	<span>All Day</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="dis-box">
+							<img src="images/dinner-img.png" alt="" />
+							<div class="inner">
+									<div class="title">Discover Our Menus</div>
+									<div class="sub-title">Fantastic food & drinks</div>
+								<div class="info">
+									<a href="javascript:void(0)">	<span>Dinner</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-4 col-md-4 col-lg-4">
+						<div class="dis-box">
+							<img src="images/set-menu-img.png" alt="" />
+							<div class="inner">
+									<div class="title"></div>
+									<div class="sub-title"></div>
+								<div class="info">
+									<a href="javascript:void(0)">	<span>Set Menu</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="group-booking">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="img-box">
+							<img src="images/group-booking-img.png" alt="" />
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-lg-6">
+						<div class="inner">
+							<div class="info">
+							<div class="title">Group Bookings</div>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+								</p>
+								<p>
+									Ta labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Cididunt ut labore et dolore mag.
+								</p>
+								<p>
+									<a href="javascript:void(0)" class="btn"><span>View Offer</span></a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+<footer>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-sm-2 col-md-2 col-lg-2">
+				<div class="footer-logo">
+					<a href="javascript:void(0)">
+						<img src="images/footer-logo.svg" alt="" />
+					</a>
+				</div>
+			</div>
+			<div class="col-12 col-sm-2 col-md-2 col-lg-2">
+				<ul>
+					<li><a href="javascript:void(0)">Book A Table</a></li>
+					<li><a href="javascript:void(0)">Group Bookings</a></li>
+					<li><a href="javascript:void(0)">Our Story</a></li>
+					<li><a href="javascript:void(0)">Blog</a></li>
+				</ul>
+			</div>
+			<div class="col-12 col-sm-2 col-md-2 col-lg-2">
+				<ul>
+					<li><a href="javascript:void(0)">Sustainability</a></li>
+					<li><a href="javascript:void(0)">Newsletter</a></li>
+					<li><a href="javascript:void(0)">Menus</a></li>
+					<li><a href="javascript:void(0)">Locations</a></li>
+				</ul>
+			</div>
+			<div class="col-12 col-sm-2 col-md-2 col-lg-2">
+				<ul>
+					<li><a href="javascript:void(0)">Contact</a></li>
+					<li><a href="javascript:void(0)">FAQs</a></li>
+					<li><a href="javascript:void(0)">Careers</a></li>
+				</ul>
+			</div>
+			<div class="col-12 col-sm-2 col-md-2 col-lg-2">
+				<div class="title">Follow Us</div>
+				<ul class="social-section">
+					<li>
+						<a href="javascript:void(0)">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20.671" height="20.671" viewBox="0 0 20.671 20.671">
+								<path id="Icon_simple-instagram" data-name="Icon simple-instagram" d="M10.336,0C7.528,0,7.177.013,6.075.062A7.621,7.621,0,0,0,3.566.543,5.061,5.061,0,0,0,1.735,1.735,5.043,5.043,0,0,0,.543,3.566,7.6,7.6,0,0,0,.062,6.075C.01,7.177,0,7.528,0,10.336S.013,13.494.062,14.6a7.626,7.626,0,0,0,.481,2.509,5.069,5.069,0,0,0,1.192,1.831,5.054,5.054,0,0,0,1.831,1.192,7.631,7.631,0,0,0,2.509.481c1.1.052,1.453.062,4.261.062s3.158-.013,4.261-.062a7.649,7.649,0,0,0,2.509-.481,5.282,5.282,0,0,0,3.023-3.023,7.626,7.626,0,0,0,.481-2.509c.052-1.1.062-1.453.062-4.261s-.013-3.158-.062-4.261a7.644,7.644,0,0,0-.481-2.509,5.073,5.073,0,0,0-1.192-1.831A5.036,5.036,0,0,0,17.106.543,7.6,7.6,0,0,0,14.6.062C13.494.01,13.144,0,10.336,0Zm0,1.86c2.759,0,3.088.014,4.177.061a5.7,5.7,0,0,1,1.918.357A3.4,3.4,0,0,1,18.393,4.24a5.707,5.707,0,0,1,.356,1.918c.049,1.09.06,1.418.06,4.177s-.013,3.088-.064,4.177a5.817,5.817,0,0,1-.363,1.918,3.282,3.282,0,0,1-.774,1.19,3.225,3.225,0,0,1-1.189.772,5.749,5.749,0,0,1-1.925.356c-1.1.049-1.42.06-4.185.06s-3.089-.013-4.185-.064A5.861,5.861,0,0,1,4.2,18.383a3.2,3.2,0,0,1-1.188-.774,3.138,3.138,0,0,1-.775-1.189,5.866,5.866,0,0,1-.362-1.925c-.039-1.085-.053-1.42-.053-4.172s.014-3.089.053-4.187a5.859,5.859,0,0,1,.362-1.924,3.064,3.064,0,0,1,.775-1.189A3.057,3.057,0,0,1,4.2,2.249a5.721,5.721,0,0,1,1.913-.363c1.1-.039,1.421-.052,4.185-.052l.039.026Zm0,3.168a5.307,5.307,0,1,0,5.307,5.307A5.307,5.307,0,0,0,10.336,5.028Zm0,8.753a3.445,3.445,0,1,1,3.445-3.445A3.444,3.444,0,0,1,10.336,13.781Zm6.758-8.962a1.24,1.24,0,1,1-1.24-1.239A1.241,1.241,0,0,1,17.094,4.819Z" fill="#fff"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<svg xmlns="http://www.w3.org/2000/svg" width="10.161" height="18.973" viewBox="0 0 10.161 18.973">
+								<path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M11.105,10.672l.527-3.434H8.337V5.01a1.717,1.717,0,0,1,1.936-1.855h1.5V.232A18.265,18.265,0,0,0,9.112,0C6.4,0,4.625,1.645,4.625,4.622V7.239H1.609v3.434H4.625v8.3H8.337v-8.3Z" transform="translate(-1.609)" fill="#fff"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22.674" height="18.451" viewBox="0 0 22.674 18.451">
+								<path id="Icon_ionic-logo-twitter" data-name="Icon ionic-logo-twitter" d="M24.088,6.686a9.4,9.4,0,0,1-2.672.735,4.668,4.668,0,0,0,2.047-2.575,9.244,9.244,0,0,1-2.955,1.129A4.651,4.651,0,0,0,12.46,9.156a4.554,4.554,0,0,0,.12,1.062A13.183,13.183,0,0,1,2.989,5.35a4.661,4.661,0,0,0,1.446,6.218,4.544,4.544,0,0,1-2.114-.581v.058a4.656,4.656,0,0,0,3.733,4.565,4.683,4.683,0,0,1-1.225.163,4.389,4.389,0,0,1-.874-.086A4.659,4.659,0,0,0,8.3,18.92a9.327,9.327,0,0,1-5.78,1.994,9.429,9.429,0,0,1-1.11-.067,13,13,0,0,0,7.121,2.1A13.157,13.157,0,0,0,21.781,9.7c0-.2,0-.4-.014-.6A9.47,9.47,0,0,0,24.088,6.686Z" transform="translate(-1.413 -4.5)" fill="#fff"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<ul class="bottom-nav">
+					<li><a href="javascript:void(0)">Modern Slavery Act</a></li>
+					<li><a href="javascript:void(0)">Gender Pay Gap</a></li>
+					<li><a href="javascript:void(0)">Animal Welfare policy</a></li>
+					<li><a href="javascript:void(0)">Terms & Conditions</a></li>
+					<li><a href="javascript:void(0)">Privacy policy</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<a href="javascript:void(0)" class="book-table-btn" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Book A Table</a>
+<div class="modal fade book-table-popup" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        	<svg fill="#e69e3d" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="96px" height="96px"><path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="continer">
+      		<div class="row justify-content-center align-items-center">
+      			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-10">
+      				<form action="">
+      					<div class="row justify-content-center align-items-center">
+      						<div class="col-12 col-sm-3 col-md-6 col-lg-3">
+      							<div class="mb-3">
+      							  <label for="formGroupExampleInput" class="form-label">Table Size</label>
+      							  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+      							    <option selected>2 people</option>
+      							    <option value="1">3 people</option>
+      							    <option value="2">4 people</option>
+      							    <option value="3">5 people</option>
+      							  </select>
+      							  <span class="bor-bottom"></span>
+      							</div>
+      						</div>
+      						<div class="col-12 col-sm-3 col-md-6 col-lg-3">
+
+      							<div class="mb-3">
+      								<label for="formGroupExampleInput" class="form-label">Date</label>
+      								<div id="datepicker" class="input-group date lg mb-3" data-date-format="mm-dd-yyyy">
+      								    <input class="form-control " type="text" readonly />
+      								    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+      								</div>
+      								<span class="bor-bottom"></span>
+      							</div>
+      						</div>
+      						<div class="col-12 col-sm-3 col-md-6 col-lg-3">
+      							<div class="mb-3">
+      							  <label for="formGroupExampleInput" class="form-label">Time</label>
+      							  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+      							    <option selected>7:00pm</option>
+      							    <option value="1">8:00pm</option>
+      							    <option value="2">9:00pm</option>
+      							    <option value="3">10:00pm</option>
+      							    <option value="3">11:00pm</option>
+      							    <option value="3">12:00pm</option>
+      							  </select>
+      							  <span class="bor-bottom"></span>
+      							</div>
+      						</div>
+      						<div class="col-12 col-sm-3 col-md-6 col-lg-3">
+      							<div class="mb-3">
+      							  <label for="formGroupExampleInput" class="form-label">Location</label>
+      							  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+      							    <option selected>Bath</option>
+      							    <option value="1">- London</option>
+      							    <option value="2">Chiswick</option>
+      							    <option value="3">Clink Street</option>
+      							    <option value="4">Covent Garden</option>
+      							    <option value="5">Ealing</option>
+      							    <option value="6">Baker Street</option>
+      							  </select>
+      							  <span class="bor-bottom"></span>
+      							</div>
+      						</div>
+      						<div class="col-12"><button class="btn"><span>Find A Table</span></button></div>
+      					</div>
+      				</form>
+      			</div>
+      		</div>
+	       	
+      	</div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0)"><img src="images/footer-logo.svg" alt="" /></a>
+        <p>For bookings of 8+ people please enquire here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+		<script type="text/javascript">
+			// datepicker js
+			$(function () {
+			  $("#datepicker").datepicker({ 
+			        autoclose: true, 
+			        todayHighlight: true
+			  }).datepicker('update', new Date());
+			});
+			// datepicker js
+
+			$(window).resize(function(){
+			 navset();
+
+			});
+
+			navset();
+			  function navset(){
+			    if ($(window).width() > 300) {
+			        $(window).scroll(function(){  
+			    if ($(this).scrollTop() > 100) {
+			        $('#navbar_top').addClass("sticky");
+			        // add padding top to show content behind navbar
+			        //$('body').css('padding-top', $('.topbar').outerHeight() + 'px');
+			      }else{
+			        $('#navbar_top').removeClass("sticky");
+			         // remove padding top from body
+			        //$('body').css('padding-top', '0');
+			      }  
+			    });
+			} // end if
+			  }
+
+			  var width=window.innerWidth;
+			  function resiz_header_height(){
+			  var height = (window.innerWidth * 200) / width;
+			  $('.section-top').css('min-height', height + 'px');
+			  }
+			  $(document).ready(function(){
+			  resiz_header_height();
+			  $(window).resize(resiz_header_height);
+			  });
+
+
+		</script>
+		
+	</body>
+</html>
