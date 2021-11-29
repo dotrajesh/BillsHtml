@@ -8,6 +8,7 @@
 --gray-color:#394640;
 --bg-color:#efede6;
 --date-picker-old-color:#B5751E;
+--gray-bard-color:#757575;
     /* Font/text values */
 --font-family-eb-garamond:EB Garamond;
 --font-family-gilroy: Gilroy;
@@ -181,9 +182,12 @@ header ul.custom-nav{
 	display: flex;
 }
 header ul.custom-nav li{
-	padding:0px 35px 0px;
+	padding:0px 20px 0px;
 	position: relative;
 
+}
+header ul.custom-nav li:nth-child(1) {
+    padding-left: 0;
 }
 header ul.custom-nav li:before{
 	content: '';
@@ -264,6 +268,7 @@ header ul.custom-nav li a{
  	cursor: pointer;
  	background: none;
  	opacity: 0.9;
+  margin: 11px 10px 0px 0px;
  }
   header .offcanvas ul {
      text-align: center;
@@ -340,9 +345,9 @@ header ul.custom-nav li a{
      left: 0;
      right: 0;
      margin: 0 auto;
-     width: 85px;
+     width: 55px;
      height: 1px;
-     background: #fff;
+     background:var(--white);
      opacity: 0.1;
  }
  header .offcanvas ul.social-section li {
@@ -490,6 +495,7 @@ header ul.custom-nav li a{
 	outline-offset: 0;
 	border:none;
 	box-shadow: none;
+  color: var(--white);
 }
 .section-top .form-section button:hover, .section-top .form-section button:focus, .section-top .form-section button:active:focus{
 	outline: 0;
@@ -844,8 +850,8 @@ padding-bottom: 10px;
 	position: absolute;
 	bottom:-21px;
 	left: 0px;
-	border-bottom: 0.5px solid var(--white);
-	width: 50%;
+	border-bottom: 2px solid var(--gray-bard-color) ;
+	width: 57px;
 	height: 1px;
 	right: 0px;
 	margin: 0 auto;
@@ -853,17 +859,19 @@ padding-bottom: 10px;
 		-moz-transition: all 0.3s;
 	  -o-transition: all 0.3s;
 		transition: all 0.3s;
+    opacity: 0.5;
 }
 .discover-our-menus .dis-box:hover .inner .info a:after{
 	content: '';
 	position: absolute;
 	bottom:-21px;
 	left: 0px;
-	border-bottom: 0.5px solid var(--white);
+	border-bottom: 2px solid var(--white);
 	width:100%;
 	height: 1px;
 	right: 0px;
 	margin: 0 auto;
+  opacity: 0.5;
 }
 .group-booking{
 	background: var(--green-color);
@@ -871,7 +879,7 @@ padding-bottom: 10px;
 }
 .group-booking .inner .title{
 	letter-spacing: 3.2px;
-	color: #E69E3D;
+	color: var(--yellow-color);
 	opacity: 1;
 	font-size: 40px;
 	font-weight: 52px;
@@ -952,7 +960,7 @@ footer ul {
 }
 footer ul li a {
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: var(--white);
     opacity: 1;
     text-decoration: none;
     font-size: 12px;
@@ -971,7 +979,7 @@ footer ul li a:hover, footer ul li a:focus{
 }
 footer .title{
 	letter-spacing:0.57px;
-	color: #E69E3D;
+	color:var(--yellow-color);
 	opacity: 1;
 	font-size: 19px;
 	font-weight: 25px;
@@ -1009,14 +1017,15 @@ footer .footer-logo{
     position: relative;
 }
 .location-arrow:before{
-	content: '';
-	position: absolute;
-	    right: 22px;
-    top: 12px;
-	background: url(../images/location-arrow-icon.svg);
-	background-repeat: no-repeat;
-	width: 30px;
-	height: 30px;
+      content: '';
+      position: absolute;
+      right: 35px;
+      top: 16px;
+      background: url(../images/location-arrow-icon.svg);
+      background-repeat: no-repeat;
+      width: 17px;
+      height: 18px;
+      background-size: cover;
 }
 .book-table-btn{
   position: fixed;
@@ -1041,6 +1050,14 @@ transition: all 0.3s;
 }
 .book-table-btn:hover{
   background: var(--yellow-color);
+  color:var(--white);
+}
+.inner-page .book-table-btn{
+  background: var(--yellow-color);
+  color:var(--gray-color);
+}
+.inner-page .book-table-btn:hover{
+  background: var(--black-light);
   color:var(--white);
 }
 .book-table-popup .modal-dialog.modal-fullscreen {
@@ -1080,18 +1097,25 @@ transition: all 0.3s;
     font-size: 16px;
     line-height: 22px;
 }
+.book-table-popup .modal-dialog.modal-fullscreen .modal-content .modal-footer p a{
+  color:var(--white);
+}
 .book-table-popup .modal-dialog.modal-fullscreen .row{
   height: 100%;
     /*min-height: calc(100vh - 7.5rem * 2 - 5.8125rem);*/
-    padding: 10% 0px 10px;
+    padding: 4% 0px 10px;
 }
+/*.book-table-popup .modal-dialog.modal-fullscreen form{
+  height: 100%;
+    min-height: calc(100vh - 7.5rem * 2 - 5.8125rem);
+}*/
 .book-table-popup .modal-dialog.modal-fullscreen .modal-content label {
     letter-spacing: 1.52px;
     color: var(--white);
     opacity: 1;
     font-size: 19px;
     text-align: left;
-    padding: 0;
+    padding:0px 0px 22px 0px;
     margin: 0;
     font-weight: var(--font-weight-normal);
     font-style: var(--font-style-italic);
@@ -1112,8 +1136,7 @@ transition: all 0.3s;
     appearance: none;
      background:var(--black-light) url("../images/arrow_down_icon.svg");
   background-repeat: no-repeat;
-    background-position-x: 103%;
-    background-position-y:7px;
+
     position: relative;
     letter-spacing: 2.32px;
     color:var(--white);
@@ -1123,6 +1146,21 @@ transition: all 0.3s;
     font-family: var(--font-family-eb-garamond);
     font-size: 21px;
     padding-left: 0px;
+    background-position: right;
+    background-position-x: 105%;
+   /* background-repeat: no-repeat;
+        background-position: right;
+        padding-right: 0px;*/
+ /*       background-position-x: 105%;
+            background-position-y: 6px;*/
+}
+.book-table-popup .modal-dialog.modal-fullscreen .modal-content .date .form-control {
+  background:var(--black-light) url("../images/icon-feather-calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.book-table-popup .modal-dialog.modal-fullscreen .modal-content .mb-3 {
+    margin-bottom: 4px !important;
 }
 .book-table-popup .modal-dialog.modal-fullscreen .modal-content .mb-3 span.bor-bottom, .book-table-popup .modal-dialog.modal-fullscreen .modal-content .mb-3 span.bor-bottom{
   border-bottom:0.5px solid var(--white);
@@ -1147,7 +1185,7 @@ transition: all 0.3s;
     width: 161px;
     border: 1px solid var(--white);
     height: 48px;
-    margin: 20px auto 0px ;
+    margin: 48px auto 0px;
     display: flex;
     justify-content: center;
     color: var(--white);
@@ -1167,7 +1205,323 @@ transition: all 0.3s;
 }
 section.top-header {
     padding: 79px 0px 0px;
+    background: url(../images/events-offers-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 682px;
+  position: relative;
+  margin-top: 79px;
+  background-position: center;
 }
+section.top-header .container{
+  position: relative;
+}
+section.top-header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--black) 0% 0% no-repeat padding-box;
+    opacity: 0.4;
+}
+section.top-header .row {
+  min-height: calc(100vh - 7.5rem * 2 - 5.8125rem);
+}
+section.top-header h1{
+  color:var(--white);
+  opacity: 1;
+  letter-spacing: 4.64px;
+  font-weight: var(--font-weight-normal);
+  font-style: var(--font-style-italic);
+  font-family: var(--font-family-eb-garamond);
+  font-size: 58px;
+  text-align: center;
+}
+
+.section-top .form-section .col-12.col-sm-4.col-md-4.col-lg-5 {
+    width: 35.666667%;
+}
+.book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-select option[disabled] {
+    color: var(--yellow-color);
+}
+.book-table-popup .modal-dialog.modal-fullscreen .modal-content .modal-body {
+    overflow: inherit;
+}
+.what-at-bill .card .inner .dec p {
+    padding: 0;
+    margin: 0;
+}
+
+
+.comm-form .form-select, .comm-form .form-control {
+    border-radius: 0px;
+    height:auto;
+    background: transparent;
+    border: none;
+    /*border-bottom: 1px solid var(--white);*/
+    width: 100% !important;
+    box-shadow: none;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+     background: url("../images/arrow_down_gray_icon.svg");
+  background-repeat: no-repeat;
+    background-position-x: 103%;
+    background-position-y:7px;
+    position: relative;
+    letter-spacing:1.32px;
+    color:var(--black-light);
+    opacity: 1;
+    font-weight: var(--font-weight-normal);
+    font-style: var(--font-style-italic);
+    font-family: var(--font-family-eb-garamond);
+    font-size:19px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+        padding-bottom: 0px;
+        background-position: top right;
+        margin-bottom: 7px !important;
+}
+.comm-form .mb-3 span.bor-bottom, .comm-form .mb-3 span.bor-bottom{
+  border-bottom:0.5px solid var(--black-light);
+      width: 100%;
+      height: 1px;
+      display: block;
+}
+.comm-form .col-12 .mb-3.row .col-12 {
+    padding-right: 40px;
+}
+.comm-form .col-12 .mb-3.row .col-12:last-child {
+    padding-right:15px;
+}
+.comm-form .form-check input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    border-color:var(--black-light);
+    background: transparent !important;
+}
+.comm-form .form-check {
+    margin-top: 8px;
+}
+.comm-form .form-check label.form-check-label {
+    letter-spacing: 1.44px;
+    color:var(--gray-color);
+    opacity: 1;
+    font-size: 18px;
+    font-weight: var(--font-weight-normal);
+    font-style: var(--font-style-italic);
+    font-family: var(--font-family-eb-garamond);
+}
+.comm-form .form-check input[type="radio"]:checked {
+    background: var(--gray-color) !important;
+    border-color: var(--gray-color) !important;
+    box-shadow: none;
+}
+.comm-form button.btn {
+    width: 121px;
+    height: 42px;
+    float: right;
+}
+.event-offers-section .box-section{
+  padding: 18px 0px;
+}
+.event-offers-section .box-section .large-box{
+    background:var(--yellow-color);
+    margin-bottom: 35px;
+    position: relative;
+}
+.event-offers-section .box-section .large-box:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    background: url(../images/box-bottom-border.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.event-offers-section .box-section .large-box img {
+    z-index: 1;
+    position: relative;
+}
+.event-offers-section .box-section .large-box .inner {
+    padding: 0px 36px 0px 56px;
+}
+
+.event-offers-section .box-section .large-box .inner p {
+    color: var(--white);
+    letter-spacing: 0.42px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    font-weight: var(--font-weight-normal);
+}
+.event-offers-section .box-section .large-box .inner h2 {
+    font-size: 33px;
+    color: var(--white);
+    font-weight: var(--font-weight-normal);
+    font-style: var(--font-style-italic);
+    font-family: var(--font-family-eb-garamond);
+    letter-spacing: 2px;
+    padding: 0px 0px 25px;
+    margin: 0;
+}
+.event-offers-section .box-section .large-box .inner a.btn {
+    border-color: var(--white);
+    color: var(--white);
+    margin-top: 25px;
+}
+.event-offers-section .box-section .large-box .inner a.btn:hover, .event-offers-section .box-section .large-box .inner a.btn:focus, .event-offers-section .box-section .large-box .inner a.btn:active:focus {
+    border-color: var(--black-light);
+}
+.event-offers-section .box-section .box .inner {
+    padding: 34px 22px 34px 25px;
+    display: flex;
+    color: #fff;
+    flex-wrap: wrap;
+    position: relative;
+}
+.event-offers-section .box-section .box .inner:after{
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height:4px;
+  background: url(../images/box-bottom-border.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.event-offers-section .box-section .box .inner p {
+    color: var(--white);
+    letter-spacing: 0.36px;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    font-weight: var(--font-weight-normal);
+        min-height: 110px;
+}
+.event-offers-section .box-section .box .inner .title {
+    font-size: 25px;
+    color: var(--white);
+    font-weight: var(--font-weight-normal);
+    font-style: var(--font-style-italic);
+    font-family: var(--font-family-eb-garamond);
+    letter-spacing: 2px;
+    padding: 0px 0px 15px;
+    margin: 0;
+}
+.event-offers-section .box-section .box .inner a.btn {
+    border-color: var(--white);
+    color: var(--white);
+    margin-top: 25px;
+}
+.event-offers-section .box-section .box .inner a.btn:hover, .event-offers-section .box-section .box .inner a.btn:focus, .event-offers-section .box-section .box .inner a.btn:active:focus {
+    border-color: var(--yellow-color);
+}
+.event-offers-section .box-section .box .inner a.btn:hover::before, .event-offers-section .box-section .box .inner a.btn:focus::before, .event-offers-section .box-section .box .inner a.btn:active:focus::before {
+    background: var(--yellow-color);
+}
+.event-offers-section .box-section .box{
+  background: var(--black-light);
+     min-height: 93%;
+  margin-bottom: 35px;
+}
+.event-offers-section .box-section .large .box p {
+    min-height: 69px;
+}
+
+
+.promo-popup .modal-header {
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+}
+.promo-popup .modal-content {
+    border-radius: 0px;
+}
+.promo-popup .modal-body {
+    padding: 0;
+    margin: 0;
+    overflow: inherit;
+}
+.promo-popup .modal-header button.btn-close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+.promo-popup .modal-body .card {
+    border: none;
+    border-radius: 0px;
+}
+.promo-popup .modal-body .card .title {
+    letter-spacing: 2.8px;
+    color: var(--black-light);
+    opacity: 1;
+    line-height: 45px;
+    font-size: 35px;
+    font-weight: var(--font-weight-normal);
+    font-style: var(--font-style-italic);
+    font-family: var(--font-family-eb-garamond);
+}
+.promo-popup .modal-body .card .dec {
+    letter-spacing: 0.48px;
+    font-size: 16px;
+    color: var(--black-light);
+    line-height: 24px;
+    font-weight: var(--font-weight-normal);
+    padding: 20px 0px;
+}
+.promo-popup .modal-body .card .dec p {
+    margin: 0;
+    padding: 0;
+}
+.promo-popup .modal-body .card .inner {
+    padding:0px 19px 10px 24px;
+}
+.modal-header button.btn-close:hover, 
+.modal-header button.btn-close:focus{
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+.book-table-popup .modal-dialog.modal-fullscreen .modal-content .modal-footer p:last-child {
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: 0.33px;
+        padding: 14px 0px;
+}
+.book-table-popup .modal-dialog.modal-fullscreen .modal-content .modal-footer p:last-child a{
+  margin-left: 10px;
+}
+.offcanvas .offcanvas-body {
+    overflow-y: inherit;
+}
+/* Chrome only: */
+@supports (-moz-appearance:none) {
+  .book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-select, .book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-control {
+    background-position-x: 100%;
+  }
+}
+
+
+
 /*label{margin-left: 20px;}*/
 
 /* Large desktops and laptops */
@@ -1176,6 +1530,23 @@ section.top-header {
 	    padding: 50px 58px 50px 68px;
 	}
 
+}
+@media (max-width: 1388px) { 
+ .event-offers-section .box-section .large .box .inner .title {
+     padding-bottom: 6px;
+ }
+ .event-offers-section .box-section .large .box .inner {
+     padding: 16px 19px;
+ }
+ .event-offers-section .box-section .large .box {
+     min-height: 92%;
+ }
+ .event-offers-section .box-section .large .box p {
+     min-height: 69px;
+ }
+ .event-offers-section .box-section .large .box .inner a.btn {
+     margin-top: 10px;
+ }
 }
 @media (max-width: 1366px) { 
 	header .offcanvas ul.navbar-nav li a{
@@ -1188,6 +1559,23 @@ section.top-header {
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .promo-popup .modal-body .card img {
+        width: 100%;
+    }
+    .promo-popup .modal-body .card .inner {
+        padding: 20px 19px 30px 24px ;
+    }
+    .promo-popup .modal-header button.btn-close {
+        background-color: var(--white);
+        padding: 7px ;
+        opacity: 1;
+        border-radius: 0px;
+        top:0px;
+        right: 0px;
+    }
+  .section-top .form-section .col-12.col-sm-4.col-md-4.col-lg-5 {
+      width: 28.666667%;
+  }
 	header .offcanvas ul.navbar-nav li a{
 		font-size: 25px;
 		    padding: 0.5rem	0px;
@@ -1207,14 +1595,79 @@ section.top-header {
   .book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-select, .book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-control{
     font-size: 14px;
   }
+  section.top-header {
+     background-position: center;
+     min-height: 572px;
+  }
+  section.top-header .row {
+      min-height: calc(100vh - 7.5rem * 2 - 11.813rem);
+  }
+  .event-offers-section .box-section .box .inner {
+      padding: 6px 16px;
+  }
+  .event-offers-section .box-section .box .inner .title {
+      font-size: 22px;
+      padding: 0;
+      margin: 0;
+  }
+  .event-offers-section .box-section .box .inner p{
+    min-height: 120px
+  }
+  .event-offers-section .box-section .large-box .inner {
+      padding: 0px 0px 0px 6px;
+  }
+  .event-offers-section .box-section .box {
+      min-height: 94%;
+  }
+  .event-offers-section .box-section .box .inner a.btn {
+      margin-top: 10px;
+  }
+  .event-offers-section .box-section .large-box .inner h2{
+      padding: 0px 0px 13px;
+  }
+  .event-offers-section .box-section .large-box .inner a.btn {
+      margin-top: 16px;
+  }
+  .event-offers-section .box-section .large .box .inner {
+      padding: 6px 16px;
+  }
+  .event-offers-section .box-section .large .box .inner .title {
+      padding-bottom: 0px;
+      font-size: 22px;
+  }
+  .event-offers-section .box-section .box .inner p{
+    line-height: 20px;
+  }
+  .event-offers-section .box-section .large .box p {
+      min-height: 69px;
+  }
+  .event-offers-section .box-section .large .box {
+      min-height: 91%;
+  }
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-
-	header ul.custom-nav li {
+  promo-popup .modal-body .card img {
+          width: 100%;
+      }
+      .promo-popup .modal-body .card .inner {
+          padding: 20px 19px 30px 24px ;
+      }
+      .promo-popup .modal-header button.btn-close {
+          background-color: var(--white);
+          padding: 7px ;
+          opacity: 1;
+          border-radius: 0px;
+          top:0px;
+          right: 0px;
+      }
+  .section-top .form-section .col-12.col-sm-4.col-md-4.col-lg-5 {
+      width: 33.33333333%;
+  }
+/*	header ul.custom-nav li {
 	    padding: 0px 23px 0px;
-	}
+	}*/
 	header .offcanvas ul.navbar-nav li a{
 		font-size: 25px;
 		    padding: 0.5rem	0px;
@@ -1259,17 +1712,71 @@ section.top-header {
 	   		padding-bottom: 10px;
 	   	}
       .book-table-popup .modal-dialog.modal-fullscreen .row {
-          padding-top: 18%;
+          padding-top: 7%;
           min-height: inherit;
       }
       .book-table-popup .modal-dialog.modal-fullscreen .modal-content .col-12{
         padding: 22px;
       }
+        .event-offers-section .box-section .large .box img{
+          width: 100%;
+        }
+        .event-offers-section .box-section .large .box p {
+            min-height: inherit;
+        }
+        .event-offers-section .box-section .large .box {
+            min-height: auto;
+        }
+        section.top-header{
+          min-height: 502px;
+        }
+        section.top-header .row {
+            min-height: calc(100vh - 7.5rem * 2 - 15.813rem);
+        }
+        .comm-form .col-12 .mb-3.row .col-12 {
+            padding-right: 15px;
+        }
+        .comm-form .form-check {
+            margin-top: 18px;
+        }
+        .comm-form button.btn {
+            margin-top: 14px;
+        }
+        .event-offers-section .box-section .large .box .inner {
+            padding: 34px 22px 34px 25px;
+        }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-
+  .offcanvas .offcanvas-body {
+      overflow-y: auto;
+  }
+  promo-popup .modal-body .card img {
+          width: 100%;
+      }
+      .promo-popup .modal-body .card .inner {
+          padding: 20px 19px 30px 24px ;
+      }
+      .promo-popup .modal-header button.btn-close {
+          background-color: var(--white);
+          padding: 7px ;
+          opacity: 1;
+          border-radius: 0px;
+          top:0px;
+          right: 0px;
+      }
+      .promo-popup .modal-body {
+          padding: 0;
+          margin: 0;
+          overflow-y: auto;
+      }
+  .book-table-popup .modal-dialog.modal-fullscreen .modal-content .modal-body {
+      overflow-y: auto;
+  }
+  .section-top .form-section .col-12.col-sm-4.col-md-4.col-lg-5 {
+      width: 100%;
+  }
 	header ul.custom-nav{
 		display: none;
 	}
@@ -1345,19 +1852,60 @@ section.top-header {
   }
   .book-table-popup .modal-dialog.modal-fullscreen .modal-content label{
     font-size: 16px;
+        padding-bottom: 4px ;
   }
   .book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-select, .book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-control{
     font-size: 14px;
   }
   .book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-select, .book-table-popup .modal-dialog.modal-fullscreen .modal-content .form-control {
-    height: 37px;
+    height: auto;
+    /*background-position-x: 103%;*/
+    background-position-x: 100%;
     margin-bottom: 4px !important;
+}
+.book-table-popup .modal-dialog.modal-fullscreen .modal-content .mb-3 {
+     margin-bottom: 1rem !important; 
 }
   .book-table-popup .modal-dialog.modal-fullscreen .modal-content .modal-footer p{
     font-size: 12px;
   }
   .book-table-popup .modal-dialog.modal-fullscreen .modal-content .col-12 {
       padding: 0px 18px;
+  }
+  section.top-header h1{
+    font-size: 36px;
+  }
+  section.top-header{
+    min-height: 360px;
+  }
+  section.top-header .row {
+      min-height: 30vh;
+  }
+  .comm-form .col-12 .mb-3.row .col-12 {
+      padding-right: 15px;
+      margin: 10px 0px;
+  }
+  .comm-form button.btn {
+      float: left;
+      width: 100%;
+  }
+  .event-offers-section .box-section .large-box .inner {
+      padding: 36px 36px 36px 56px;
+  }
+  .event-offers-section .box-section .large .box p {
+      min-height: inherit;
+  }
+  .event-offers-section .box-section .large .box .inner {
+      padding: 34px 22px 34px 25px;
+  }
+  .event-offers-section .box-section .box .inner p{
+    min-height: inherit;
+  }
+  .event-offers-section .box-section .large .box .inner a.btn {
+      margin-top: 25px;
+  }
+  .event-offers-section .box-section .box {
+      min-height: inherit;
   }
 }
 

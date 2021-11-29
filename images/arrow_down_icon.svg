@@ -1,3 +1,5 @@
-<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg id="Layer_1" style="enable-background:new 0 0 64 64;" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
-	.st0{fill:#ffffff;}
-</style><g><g id="Icon-Chevron-Left" transform="translate(237.000000, 335.000000)"><polyline class="st0" id="Fill-35" points="-218.7,-308.6 -216.7,-310.6 -205,-298.8 -193.3,-310.6 -191.3,-308.6 -205,-294.9      -218.7,-308.6    "/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16.507" height="8.753" viewBox="0 0 16.507 8.753">
+  <g id="Icon_feather-arrow-left" data-name="Icon feather-arrow-left" transform="translate(0.707 8.253) rotate(-90)">
+    <path id="Path_37" data-name="Path 37" d="M7.546,15.093,0,7.546,7.546,0" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

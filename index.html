@@ -26,7 +26,7 @@
 								<a class="navbar-brand" href="javascript:void(0)"><img src="images/logo-header.svg" alt="" /></a>
 								<ul class="custom-nav">
 									<li> <a href="javascript:void(0)">Menus</a></li>
-									<li> <a href="javascript:void(0)">Locations</a></li>
+									<li> <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#locations-popup">Locations</a></li>
 									<li> <a href="javascript:void(0)">Events &#38; Offers</a></li>
 									<li> <a href="javascript:void(0)">Book A Table</a></li>
 								</ul>
@@ -120,10 +120,10 @@
 				<div class="form-section">
 					<div class="title">Book A Table</div>
 					<div class="row justify-content-center align-items-center">
-						<div class="col-md-10">
+						<div class="col-12 col-sm-9 col-md-11 col-lg-9">
 							<form action="">
 								<div class="row justify-content-center align-items-center">
-									<div class="col-12 col-sm-4 col-md-4  col-lg-4">
+									<div class="col-12 col-sm-4 col-md-4  col-lg-5">
 										<div class="location-arrow">
 											<select class="form-select " aria-label="Default select example">
 												<option selected>Enter Location</option>
@@ -157,7 +157,7 @@
 											<option value="3">5:00pm</option>
 										</select>
 									</div>
-									<div class="col-12 col-md-2">
+									<div class="col-12 col-md-1">
 										<button type="button" class="btn btn-primary"><span>GO</span></button>
 									</div>
 								</div>
@@ -193,7 +193,7 @@
 										<div class="dec">
 											The night doesn’t end when the meal’s over – it’s when the party really starts. Every Thursday, Friday and Saturday night from 30 September get ready to eat, drink, dance, repeat, as we bring you bran…
 										</div>
-										<a class="btn" href="javascript:void(0)"><span>Find Out More</span></a>
+										<a class="btn" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#promopopup"><span>Find Out More</span></a>
 									</div>
 								</div>
 							</div>
@@ -320,7 +320,7 @@
 		<div class="row justify-content-center">
 			<div class="col-12 col-sm-2 col-md-2 col-lg-2">
 				<div class="footer-logo">
-					<a href="javascript:void(0)">
+					<a href="index.html">
 						<img src="images/footer-logo.svg" alt="" />
 					</a>
 				</div>
@@ -446,12 +446,12 @@
       							  <label for="formGroupExampleInput" class="form-label">Location</label>
       							  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
       							    <option selected>Bath</option>
-      							    <option value="1">- London</option>
-      							    <option value="2">Chiswick</option>
-      							    <option value="3">Clink Street</option>
-      							    <option value="4">Covent Garden</option>
-      							    <option value="5">Ealing</option>
-      							    <option value="6">Baker Street</option>
+      							    <option value="1" disabled>&nbsp; - London</option>
+      							    <option value="2">&nbsp;Chiswick</option>
+      							    <option value="3">&nbsp;Clink Street</option>
+      							    <option value="4">&nbsp;Covent Garden</option>
+      							    <option value="5">&nbsp;Ealing</option>
+      							    <option value="6">&nbsp;Baker Street</option>
       							  </select>
       							  <span class="bor-bottom"></span>
       							</div>
@@ -465,9 +465,78 @@
       	</div>
       </div>
       <div class="modal-footer">
-        <a href="javascript:void(0)"><img src="images/footer-logo.svg" alt="" /></a>
-        <p>For bookings of 8+ people please enquire here.</p>
+        <p>For bookings of 8+ people please enquire <a href="javascript:void(0)">here.</a></p>
+        <p>Powered By <a href="javascript:void(0)"><img src="images/opentable-official.svg" alt="" /></a></p>
       </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade promo-popup" id="promopopup" tabindex="-1" aria-labelledby="promopopupTitle"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="card">
+	      	<div class="continer">
+	      		<div class="row justify-content-center align-items-center">
+	      			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+	      				<img src="images/chin-chin-img.png" alt="" />
+	      			</div>
+	      			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+	      				<div class="inner">
+									<div class="title">Chin-Chin!</div>
+									<div class="dec">
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cu.
+										</p>
+									</div>
+									<a class="btn" href="javascript:void(0)"><span>Find Out More</span></a>
+								</div>
+	      			</div>
+	      		</div>
+	      	</div>
+      	</div>
+      </div>
+    
+    </div>
+  </div>
+</div>
+
+<div class="modal fade locations-popup" id="locations-popup" tabindex="-1" aria-labelledby="locations-popupTitle"  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="card">
+	      	<div class="continer">
+	      		<div class="row justify-content-center align-items-center">
+	      			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+	      				<img src="images/chin-chin-img.png" alt="" />
+	      			</div>
+	      			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+	      				<div class="inner">
+									<div class="title">Chin-Chin!</div>
+									<div class="dec">
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cu.
+										</p>
+									</div>
+									<a class="btn" href="javascript:void(0)"><span>Find Out More</span></a>
+								</div>
+	      			</div>
+	      		</div>
+	      	</div>
+      	</div>
+      </div>
+    
     </div>
   </div>
 </div>
